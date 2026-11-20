@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    
+    <display-name>Energy Heatmap Add-on</display-name>
+    
+    <!-- ==================== СУЩЕСТВУЮЩИЕ СЕРВЛЕТЫ ==================== -->
+    
+    <servlet>
+        <servlet-name>HeatmapDataServlet</servlet-name>
+        <servlet-class>com.controlj.addon.heatmap.servlet.HeatmapDataServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HeatmapDataServlet</servlet-name>
+        <url-pattern>/data</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>MeterFinderServlet</servlet-name>
+        <servlet-class>com.controlj.addon.heatmap.servlet.MeterFinderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MeterFinderServlet</servlet-name>
+        <url-pattern>/meters/find</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>TreeRootsServlet</servlet-name>
+        <servlet-class>com.controlj.addon.heatmap.servlet.TreeRootsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TreeRootsServlet</servlet-name>
+        <url-pattern>/tree/roots</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>AggregateDataServlet</servlet-name>
+        <servlet-class>com.controlj.addon.heatmap.servlet.AggregateDataServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AggregateDataServlet</servlet-name>
+        <url-pattern>/data/aggregate</url-pattern>
+    </servlet-mapping>
+    
+    <!-- ==================== НОВЫЙ СЕРВЛЕТ ДЛЯ НАСТРОЕК ==================== -->
+
+<servlet>
+    <servlet-name>SettingsServlet</servlet-name>
+    <servlet-class>com.controlj.addon.heatmap.servlet.SettingsServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>SettingsServlet</servlet-name>
+    <url-pattern>/settings</url-pattern>
+</servlet-mapping>
+
+    <!-- ==================== НОВЫЙ СЕРВЛЕТ ==================== -->
+    
+    <servlet>
+        <servlet-name>CalculatedPercentReportServlet</servlet-name>
+        <servlet-class>com.controlj.addon.heatmap.servlet.CalculatedPercentReportServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CalculatedPercentReportServlet</servlet-name>
+        <url-pattern>/report/calculated-percent</url-pattern>
+    </servlet-mapping>
+    
+    <!-- ==================== НАСТРОЙКИ ==================== -->
+    
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+    
+    <welcome-file-list>
+        <welcome-file>heatmap.jsp</welcome-file>
+    </welcome-file-list>
+    
+</web-app>

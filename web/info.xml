@@ -1,0 +1,8 @@
+<extension version='1'>
+  <name>EnergyHeatmap</name>
+  <description>Energy Heatmap Add-on</description>
+  <version>1.0.15</version>
+  <vendor>MAX</vendor>
+  <eula use-system-addon-eula='true' />
+  <license-requirements />
+</extension>
