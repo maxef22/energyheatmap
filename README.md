@@ -46,6 +46,11 @@
   - `directaccess-api-addon-1.7.0.jar` — SDK аддонов WebCTRL (поставляется Automated Logic, **не распространяется**);
   - `json-20251224.jar` — библиотека org.json.
 
+## Готовый аддон
+
+Собранный аддон прикладывается к релизам: **Releases** → `Energyheatmap.addon`.
+Ставить без переименования — см. «Установка в WebCTRL».
+
 ## Сборка
 
 1. Положить оба JAR в каталог **на уровень выше** папки проекта (так прописано в `nbproject/project.properties`):
